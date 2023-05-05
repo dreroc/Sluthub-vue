@@ -353,7 +353,7 @@ const copyStreamURLAction = {
     if (menuProps.item.Id) {
       const downloadHref = getItemDownloadObject(menuProps.item.Id);
 
-      if (downloadHref && downloadHref.url) {
+      if (downloadHref?.url) {
         await useClipboardWrite(downloadHref.url);
       } else {
         console.error('Unable to get stream URL for selected item');

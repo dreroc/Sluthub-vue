@@ -484,7 +484,7 @@ export function getItemDownloadObject(
 
   return {
     url: `${serverAddress}/Items/${itemId}/Download?api_key=${userToken}`,
-    fileName: fileName || ''
+    fileName: fileName ?? ''
   };
 }
 
