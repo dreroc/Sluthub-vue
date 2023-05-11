@@ -24,7 +24,7 @@
     :name="t('mediaInfoGenericProfile')"
     :value="stream.Profile" />
   <media-detail-attr
-    v-if="stream.Level ?? 0 > 0"
+    v-if="(stream.Level ?? 0) > 0"
     :name="t('mediaInfoVideoLevel')"
     :value="stream.Level ?? 0" />
   <media-detail-attr

@@ -25,7 +25,7 @@
     <v-card-text
       v-if="selectedMediaSource"
       class="pa-3 d-flex flex-column flex-grow-1">
-      <template v-if="selectedMediaSource.MediaStreams?.length ?? 0 > 0">
+      <template v-if="(selectedMediaSource.MediaStreams?.length ?? 0) > 0">
         <v-tabs v-model="currentTab" direction="horizontal" center-active>
           <v-tab value="general">{{ $t('general') }}</v-tab>
           <v-tab
@@ -229,7 +229,7 @@ const mediaSources = computed<MediaSourceInfo[]>(() => {
   return props.item.MediaSources ?? [];
 });
 const displayName = computed<string | undefined>(() => {
-  if (props.item.MediaSources?.length ?? 0 > 1) {
+  if ((props.item.MediaSources?.length ?? 0) > 1) {
     const parent = props.item.Name;
 
     if (parent) {
