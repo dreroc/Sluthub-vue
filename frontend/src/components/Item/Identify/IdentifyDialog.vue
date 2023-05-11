@@ -3,6 +3,7 @@
     :model-value="model"
     :title="$t('identify')"
     :subtitle="itemPath"
+    loading
     @close="wrapClose">
     <template #loader>
       <v-progress-linear v-model="progress" :indeterminate="isLoading" />

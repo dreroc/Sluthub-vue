@@ -5,7 +5,7 @@
     :height="$vuetify.display.mobile ? undefined : 'auto'"
     :width="$vuetify.display.mobile ? undefined : '70vw'"
     @after-leave="emit('close')">
-    <v-card :loading="isLoading" height="100%" class="d-flex flex-column">
+    <v-card :loading="loading" height="100%" class="d-flex flex-column">
       <slot name="loader" />
       <v-toolbar color="transparent">
         <template v-if="slots.toolbarPrepend" #prepend>
@@ -50,7 +50,7 @@ const props = defineProps<{
   modelValue: boolean;
   title: string;
   subtitle?: string;
-  isLoading?: boolean;
+  loading?: boolean;
 }>();
 
 const emit = defineEmits<{
