@@ -1,6 +1,7 @@
 {
   "3DFormat": "3D format",
   "NoMediaSourcesAvailable": "No media sources available",
+  "NoMediaStreamsAvailable": "No media streams available for the selected source",
   "actor": "Actor",
   "actors": "Actors",
   "addNewPerson": "Add a new person",
@@ -109,8 +110,8 @@
     }
   },
   "identify": "Identify",
-  "identifyInstructResult": "You can click on one of these cards to apply the result",
   "identifyConfirmChanges": "Are you sure do you want to change '{originalItem}' with '{newIdentifiedItem}'?",
+  "identifyInstructResult": "You can click on one of these cards to apply the result",
   "imageType": {
     "art": "Art",
     "backdrop": "Backdrop",
@@ -211,6 +212,7 @@
   "mediaInfoAudioChannels": "Channels:",
   "mediaInfoAudioSampleRate": "Sample rate:",
   "mediaInfoFileContainer": "Container:",
+  "mediaInfoFileFormats": "Format:",
   "mediaInfoFilePath": "Path:",
   "mediaInfoFileSize": "Size:",
   "mediaInfoFileTitle": "Title:",
@@ -245,13 +247,16 @@
   "mediaInfoVideoFrameRate": "Framerate:",
   "mediaInfoVideoIsAnamorphic": "Anamorphic:",
   "mediaInfoVideoIsAvc": "AVC:",
-  "mediaInfoVideoIsInterlaced": "Interlaced:",
   "mediaInfoVideoLevel": "Level:",
   "mediaInfoVideoPixelFormat": "Pixel format:",
   "mediaInfoVideoRange": "Video range:",
   "mediaInfoVideoRangeType": "Video range type:",
   "mediaInfoVideoRefFrames": "Ref frames:",
   "mediaInfoVideoResolution": "Resolution:",
+  "mediaInfoVideoScanInterlaced": "Interlaced",
+  "mediaInfoVideoScanProgressive": "Progressive",
+  "mediaInfoVideoScanType": "Scan type:",
+  "mediaInfoVideoTimestamp": "Timestamp:",
   "menu": "Menu",
   "metadata": {
     "source": "Source",
@@ -269,6 +274,7 @@
   "name": "Name",
   "networks": "Networks",
   "nextUp": "Next up",
+  "no": "No",
   "noImagesFound": "No images found",
   "noInformationAvailable": "No information available",
   "noNetworkConnection": "No network connection",
@@ -367,6 +373,7 @@
   "searchNoResults": "No results found",
   "seasonEpisode": "Season {seasonNumber}, Episode {episodeNumber}",
   "seasonEpisodeAbbrev": "S{seasonNumber} E{episodeNumber}",
+  "selectVersion": "Select version",
   "series": "Series",
   "server": "Server",
   "serverVersion": "Server version",
@@ -608,5 +615,6 @@
   "writing": "Writing",
   "year": "Year",
   "years": "Years",
+  "yes": "Yes",
   "youMayAlsoLike": "You may also like"
 }
