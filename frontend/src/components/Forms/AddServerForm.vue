@@ -1,5 +1,12 @@
 <template>
   <div>
+<v-container fill-height fluid>
+  <v-row align="center"
+      justify="center">
+      <v-col>Please wait while a secure connection is being established...</v-col>
+  </v-row>
+
+</v-container>
     <v-form
       v-model="valid"
       :disabled="loading"

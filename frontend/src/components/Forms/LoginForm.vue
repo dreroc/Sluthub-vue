@@ -27,24 +27,6 @@
       <v-row align="center" no-gutters>
         <v-col class="mr-2">
           <v-btn
-            v-if="isEmpty(user)"
-            to="/server/select"
-            block
-            size="large"
-            variant="elevated">
-            {{ $t('login.changeServer') }}
-          </v-btn>
-          <v-btn
-            v-else
-            block
-            size="large"
-            variant="elevated"
-            @click="$emit('change')">
-            {{ $t('login.changeUser') }}
-          </v-btn>
-        </v-col>
-        <v-col class="mr-2">
-          <v-btn
             :disabled="!valid"
             :loading="loading"
             block

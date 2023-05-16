@@ -25,11 +25,6 @@
               {{ $t('login.manualLogin') }}
             </v-btn>
           </v-col>
-          <v-col cols="11" sm="6" class="d-flex justify-center">
-            <v-btn block to="/server/select" size="large" variant="elevated">
-              {{ $t('login.changeServer') }}
-            </v-btn>
-          </v-col>
         </v-row>
       </v-col>
       <v-col
