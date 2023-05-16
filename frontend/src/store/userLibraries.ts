@@ -7,7 +7,8 @@ import { getUserLibraryApi } from '@jellyfin/sdk/lib/utils/api/user-library-api'
 import {
   BaseItemDto,
   ImageType,
-  ItemFields
+  ItemFields,
+  BaseItemKind
 } from '@jellyfin/sdk/lib/generated-client';
 import { cloneDeep } from 'lodash-es';
 import { CardShapes } from '@/utils/items';
@@ -276,7 +277,11 @@ class UserLibrariesStore {
             ItemFields.ProviderIds
           ],
           enableImageTypes: [ImageType.Backdrop, ImageType.Logo],
-          imageTypeLimit: 1
+          imageTypeLimit: 1,
+          includeItemTypes: [
+            BaseItemKind.Movie,
+            BaseItemKind.Series
+          ]
         })
       ).data;
 
