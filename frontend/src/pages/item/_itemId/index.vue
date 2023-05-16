@@ -3,7 +3,7 @@
     <template #left>
       <v-row justify="center" justify-md="start">
         <v-col cols="6" md="3">
-          <card :item="item" />
+          <card :item="item" margin overlay link />
         </v-col>
         <v-col cols="12" md="9">
           <h1
@@ -30,11 +30,7 @@
             }">
             <play-button
               class="mr-2"
-              :item="item"
-              :media-source-index="currentSourceIndex"
-              :video-track-index="currentVideoTrack"
-              :audio-track-index="currentAudioTrack"
-              :subtitle-track-index="currentSubtitleTrack" />
+              :item="item" />
             <like-button :item="item" class="mr-2" />
             <mark-played-button :item="item" class="mr-2" />
             <item-menu :item="item" />

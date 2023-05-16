@@ -26,6 +26,7 @@ import IMdiBookMusic from 'virtual:icons/mdi/book-music';
 import IMdiFolderMultiple from 'virtual:icons/mdi/folder-multiple';
 import IMdiFilmstrip from 'virtual:icons/mdi/filmstrip';
 import IMdiAlbum from 'virtual:icons/mdi/album';
+import IMdiBookmarkBoxMultiple from 'virtual:icons/mdi/album';
 import { useRemote } from '@/composables';
 
 /**
@@ -128,6 +129,9 @@ export function getLibraryIcon(
     }
     case 'playlists': {
       return IMdiPlaylistPlay;
+    }
+    case 'boxsets': {
+      return IMdiBookmarkBoxMultiple;
     }
     default: {
       return IMdiFolder;

@@ -25,9 +25,12 @@
 <script setup lang="ts">
 import { BaseItemDto } from '@jellyfin/sdk/lib/generated-client';
 import { groupBy } from 'lodash-es';
-import { computed, ref, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import { itemsStore } from '@/store';
+import { useSnackbar } from '@/composables';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const items = itemsStore();
 
 const props = defineProps<{
@@ -40,19 +43,28 @@ const children = computed(() => {
   return groupBy(items.getChildrenOfParent(props.item.Id), 'Type');
 });
 
-watch(
-  () => props.item,
-  async (item) => {
+async function refreshCollection(itemId: string | undefined) {
+  loading.value = true;
+
+  try {
     /**
      * Only try to load children if there aren't any children items in the itemStore yet
      */
-    if (children.value) {
-      return;
-    }
-
-    loading.value = true;
-    await items.fetchAndAddCollection(item.Id);
+    await items.fetchAndAddCollection(itemId);
+  } catch (error) {
+    console.error(error);
+    useSnackbar(t('failedToRefreshItems'), 'error');
+  } finally {
     loading.value = false;
+  }
+}
+
+onMounted(() => refreshCollection((props.item as { Id: string }).Id));
+
+watch(
+  () => props.item,
+  async (item) => {
+    await refreshCollection(item.Id);
   },
   { immediate: true }
 );
