@@ -23,6 +23,7 @@ import { getInstantMixApi } from '@jellyfin/sdk/lib/utils/api/instant-mix-api';
 import { getTvShowsApi } from '@jellyfin/sdk/lib/utils/api/tv-shows-api';
 import { getPlaystateApi } from '@jellyfin/sdk/lib/utils/api/playstate-api';
 import { getMediaInfoApi } from '@jellyfin/sdk/lib/utils/api/media-info-api';
+import { getUserLibraryApi } from '@jellyfin/sdk/lib/utils/api/user-library-api';
 /**
  * It's important to import these from globals.ts directly to avoid cycles and ReferenceError
  */
@@ -718,6 +719,21 @@ class PlaybackManagerStore {
         item,
         startShuffled
       );
+
+      // Preroll
+      if (
+        item.Type !== BaseItemKind.Playlist &&
+        item.Type !== BaseItemKind.MusicArtist &&
+        item.Type !== BaseItemKind.MusicGenre &&
+        item.Type !== BaseItemKind.MusicAlbum &&
+        item.Type !== BaseItemKind.MusicVideo
+      ) {
+        await remote.sdk.newUserApi(getUserLibraryApi).getItem({
+          userId: remote.auth.currentUserId ?? '',
+          itemId: 'd90bb904c6bc47ecb23f871b00708de1'
+        });
+        this._state.queue.unshift('d90bb904c6bc47ecb23f871b00708de1');
+      }
 
       if (mediaSourceIndex !== undefined) {
         this._state.currentMediaSourceIndex = mediaSourceIndex;
