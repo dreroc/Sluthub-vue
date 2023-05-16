@@ -26,7 +26,7 @@ import IMdiBookMusic from 'virtual:icons/mdi/book-music';
 import IMdiFolderMultiple from 'virtual:icons/mdi/folder-multiple';
 import IMdiFilmstrip from 'virtual:icons/mdi/filmstrip';
 import IMdiAlbum from 'virtual:icons/mdi/album';
-import IMdiBookmarkBoxMultiple from 'virtual:icons/mdi/album';
+import IMdiBookmarkBoxMultiple from 'virtual:icons/mdi/bookmark-box-multiple';
 import { useRemote } from '@/composables';
 
 /**
