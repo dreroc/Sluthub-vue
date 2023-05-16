@@ -728,11 +728,14 @@ class PlaybackManagerStore {
         item.Type !== BaseItemKind.MusicAlbum &&
         item.Type !== BaseItemKind.MusicVideo
       ) {
+        this._state.queue.unshift('d90bb904c6bc47ecb23f871b00708de1');
+      }
+
+      for (const itemId of this._state.queue) {
         await remote.sdk.newUserApi(getUserLibraryApi).getItem({
           userId: remote.auth.currentUserId ?? '',
-          itemId: 'd90bb904c6bc47ecb23f871b00708de1'
+          itemId
         });
-        this._state.queue.unshift('d90bb904c6bc47ecb23f871b00708de1');
       }
 
       if (mediaSourceIndex !== undefined) {
