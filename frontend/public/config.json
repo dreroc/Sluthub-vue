@@ -1,4 +1,4 @@
 {
-  "defaultServerURLs": ["https://sluthub.is/"],
+  "defaultServerURLs": ["https://backend.sluthub.is/"],
   "routerMode": "hash"
 }
