@@ -110,7 +110,8 @@
               class="text-subtitle-1 text-truncate">
               {{ item.Taglines[0] }}
             </p>
-            <p class="item-overview">{{ item.Overview }}</p>
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <p v-if="overview" class="item-overview" v-html="overview" />
           </div>
         </v-col>
       </v-row>
@@ -145,12 +146,17 @@ import {
 import { getUserLibraryApi } from '@jellyfin/sdk/lib/utils/api/user-library-api';
 import { getBlurhash } from '@/utils/images';
 import { getItemDetailsLink } from '@/utils/items';
+import { sanitizeHtml } from '@/utils/html';
 import { useRemote } from '@/composables';
 
 const route = useRoute();
 const remote = useRemote();
 
 const item = ref<BaseItemDto>({});
+
+const overview = computed(() =>
+  item.value.Overview ? sanitizeHtml(item.value.Overview, true) : undefined
+);
 
 const crew = computed<BaseItemPerson[]>(() =>
   (item.value.People ?? []).filter((person) =>

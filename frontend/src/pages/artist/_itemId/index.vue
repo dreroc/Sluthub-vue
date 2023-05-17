@@ -45,7 +45,7 @@
             <v-tab :value="5" :disabled="musicVideos.length === 0">
               {{ $t('item.artist.videos') }}
             </v-tab>
-            <v-tab :value="6" :disabled="!item.Overview">
+            <v-tab :value="6" :disabled="!overview">
               {{ $t('item.artist.information') }}
             </v-tab>
           </v-tabs>
@@ -85,7 +85,12 @@
                 <v-row>
                   <v-col>
                     <v-col cols="12" md="7">
-                      <span class="item-overview" v-text="item.Overview" />
+                      <!-- eslint-disable vue/no-v-html -->
+                      <span
+                        v-if="overview"
+                        class="item-overview"
+                        v-html="overview" />
+                      <!-- eslint-enable vue/no-v-html -->
                     </v-col>
                   </v-col>
                 </v-row>
@@ -117,6 +122,7 @@ import { getUserLibraryApi } from '@jellyfin/sdk/lib/utils/api/user-library-api'
 import { getItemsApi } from '@jellyfin/sdk/lib/utils/api/items-api';
 import { getBlurhash } from '@/utils/images';
 import { msToTicks } from '@/utils/time';
+import { sanitizeHtml } from '@/utils/html';
 import { useRemote } from '@/composables';
 
 const SINGLE_MAX_LENGTH_MS = 600_000;
@@ -130,6 +136,10 @@ const discography = ref<BaseItemDto[]>([]);
 const appearances = ref<BaseItemDto[]>([]);
 const musicVideos = ref<BaseItemDto[]>([]);
 const activeTab = ref(0);
+
+const overview = computed(() =>
+  item.value.Overview ? sanitizeHtml(item.value.Overview, true) : undefined
+);
 
 const singles = computed<BaseItemDto[]>(() =>
   discography.value.filter(

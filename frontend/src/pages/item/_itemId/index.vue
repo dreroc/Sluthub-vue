@@ -199,7 +199,8 @@
               class="text-subtitle-1 text-truncate">
               {{ item.Taglines[0] }}
             </p>
-            <p class="item-overview">{{ item.Overview }}</p>
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <p v-if="overview" class="item-overview" v-html="overview" />
           </div>
         </v-col>
       </v-row>
@@ -237,6 +238,7 @@ import { getUserLibraryApi } from '@jellyfin/sdk/lib/utils/api/user-library-api'
 import { getBlurhash } from '@/utils/images';
 import { getItemDetailsLink, getMediaStreams } from '@/utils/items';
 import { getItemizedSelect } from '@/utils/forms';
+import { sanitizeHtml } from '@/utils/html';
 import { useRemote } from '@/composables';
 
 const route = useRoute();
@@ -255,6 +257,9 @@ const currentSource = ref<MediaSourceInfo>({});
 const currentVideoTrack = ref<number>();
 const currentAudioTrack = ref<number>();
 const currentSubtitleTrack = ref<number>();
+const overview = computed(() =>
+  item.Overview ? sanitizeHtml(item.Overview, true) : undefined
+);
 
 const crew = computed<BaseItemPerson[]>(() =>
   (item.People ?? []).filter((person) =>

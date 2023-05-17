@@ -41,7 +41,7 @@
         <v-tab :value="3" :disabled="photos.length === 0">
           {{ $t('item.person.photos') }}
         </v-tab>
-        <v-tab :value="4" :disabled="!item.Overview">
+        <v-tab :value="4" :disabled="!overview">
           {{ $t('item.person.information') }}
         </v-tab>
       </v-tabs>
@@ -61,7 +61,8 @@
         <v-window-item :value="4">
           <v-row>
             <v-col cols="12" md="7">
-              <span class="item-overview" v-text="item.Overview" />
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <span v-if="overview" class="item-overview" v-html="overview" />
             </v-col>
             <v-col cols="12" md="5">
               <v-row v-if="birthDate || birthPlace" no-gutters>
@@ -113,6 +114,7 @@ import { format } from 'date-fns';
 import { getUserLibraryApi } from '@jellyfin/sdk/lib/utils/api/user-library-api';
 import { getItemsApi } from '@jellyfin/sdk/lib/utils/api/items-api';
 import { getBlurhash } from '@/utils/images';
+import { sanitizeHtml } from '@/utils/html';
 import { useRemote, useDateFns } from '@/composables';
 
 const route = useRoute();
@@ -124,6 +126,10 @@ const series = ref<BaseItemDto[]>([]);
 const books = ref<BaseItemDto[]>([]);
 const photos = ref<BaseItemDto[]>([]);
 const activeTab = ref(4);
+
+const overview = computed(() =>
+  item.value.Overview ? sanitizeHtml(item.value.Overview, true) : undefined
+);
 
 const birthDate = computed(() =>
   item.value.PremiereDate
