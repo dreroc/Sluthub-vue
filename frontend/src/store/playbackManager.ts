@@ -720,22 +720,14 @@ class PlaybackManagerStore {
         startShuffled
       );
 
-      // Preroll
       if (
-        item.Type !== BaseItemKind.Playlist &&
-        item.Type !== BaseItemKind.MusicArtist &&
-        item.Type !== BaseItemKind.MusicGenre &&
-        item.Type !== BaseItemKind.MusicAlbum &&
-        item.Type !== BaseItemKind.MusicVideo
+        item.Type == BaseItemKind.Movie
       ) {
-        this._state.queue.unshift('d90bb904c6bc47ecb23f871b00708de1');
-      }
-
-      for (const itemId of this._state.queue) {
         await remote.sdk.newUserApi(getUserLibraryApi).getItem({
           userId: remote.auth.currentUserId ?? '',
-          itemId
+          itemId: 'd90bb904c6bc47ecb23f871b00708de1'
         });
+        this._state.queue.unshift('d90bb904c6bc47ecb23f871b00708de1');
       }
 
       if (mediaSourceIndex !== undefined) {
