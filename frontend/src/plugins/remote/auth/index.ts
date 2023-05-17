@@ -161,8 +161,8 @@ class RemotePluginAuth {
         console.error(error);
         throw error;
       }
-    } else {
-      useSnackbar(t('login.serverNotFound'), 'error');
+    // } else {
+    //   useSnackbar(t('login.serverNotFound'), 'error');
     }
   }
 
