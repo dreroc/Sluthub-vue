@@ -36,11 +36,11 @@
         v-if="library"
         :item="library"
         shuffle
-        :disabled="playButtonDisabled" />
+        :disabled="true" /> <!-- playButtonDisabled -->
       <play-button
         v-if="library"
         :item="library"
-        :disabled="playButtonDisabled" />
+        :disabled="true" /> <!-- playButtonDisabled -->
     </v-app-bar>
     <v-container>
       <skeleton-item-grid v-if="loading" :view-type="viewType" />

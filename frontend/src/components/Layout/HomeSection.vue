@@ -6,7 +6,8 @@
         : $t(section.name, { libraryName: section.libraryName })
     "
     :items="items"
-    :shape="section.shape" />
+    :shape="section.shape"
+    :type="section.type" />
 </template>
 
 <script setup lang="ts">

@@ -36,7 +36,8 @@
           v-for="item in items"
           :key="item.Id"
           :virtual-index="item.Id">
-          <card :shape="cardShape" :item="item" margin text overlay link />
+          <card :shape="cardShape" :item="item" margin text link
+          :overlay="type ? type !== 'libraries' : true" />
         </swiper-slide>
       </swiper>
     </v-col>
@@ -66,6 +67,7 @@ const props = withDefaults(
     title: string;
     items: BaseItemDto[];
     shape?: CardShapes;
+    type?: string;
   }>(),
   { loading: false, shape: undefined }
 );
