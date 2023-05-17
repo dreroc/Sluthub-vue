@@ -151,7 +151,9 @@ class UserLibrariesStore {
           limit: 24,
           fields: [
             ItemFields.PrimaryImageAspectRatio,
+            ItemFields.MediaSources,
             ItemFields.CanDelete,
+            ItemFields.CanDownload,
             ItemFields.ProviderIds
           ],
           imageTypeLimit: 1,
@@ -181,7 +183,9 @@ class UserLibrariesStore {
           limit: 24,
           fields: [
             ItemFields.PrimaryImageAspectRatio,
+            ItemFields.MediaSources,
             ItemFields.CanDelete,
+            ItemFields.CanDownload,
             ItemFields.ProviderIds
           ],
           imageTypeLimit: 1,
@@ -211,7 +215,9 @@ class UserLibrariesStore {
           limit: 24,
           fields: [
             ItemFields.PrimaryImageAspectRatio,
+            ItemFields.MediaSources,
             ItemFields.CanDelete,
+            ItemFields.CanDownload,
             ItemFields.ProviderIds
           ],
           imageTypeLimit: 1,
@@ -243,7 +249,10 @@ class UserLibrariesStore {
           limit: 24,
           fields: [
             ItemFields.PrimaryImageAspectRatio,
+            ItemFields.MediaSources,
+
             ItemFields.CanDelete,
+            ItemFields.CanDownload,
             ItemFields.ProviderIds
           ],
           imageTypeLimit: 1,
@@ -273,7 +282,9 @@ class UserLibrariesStore {
           fields: [
             ItemFields.Overview,
             ItemFields.PrimaryImageAspectRatio,
+            ItemFields.MediaSources,
             ItemFields.CanDelete,
+            ItemFields.CanDownload,
             ItemFields.ProviderIds
           ],
           enableImageTypes: [ImageType.Backdrop, ImageType.Logo],

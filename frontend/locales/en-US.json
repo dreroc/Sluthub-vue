@@ -1,6 +1,7 @@
 {
   "3DFormat": "3D format",
   "NoMediaSourcesAvailable": "No media sources available",
+  "NoMediaStreamsAvailable": "No media streams available for the selected source",
   "actor": "Actor",
   "actors": "Actors",
   "addNewPerson": "Add a new person",
@@ -34,6 +35,9 @@
   "byArtist": "By {artist}",
   "cancel": "Cancel",
   "castAndCrew": "Cast & crew",
+  "clipboardFail": "Failed to copy to clipboard",
+  "clipboardSuccess": "Copied to clipboard",
+  "close": "Close",
   "collectionEmpty": "This collection is empty",
   "collections": "Collections",
   "communityRating": "Community rating",
@@ -41,6 +45,7 @@
   "connect": "Connect",
   "continueListening": "Continue listening",
   "continueWatching": "Continue watching",
+  "copyStreamURL": "Copy Stream URL",
   "criticRating": "Critic rating",
   "customRating": "Custom rating",
   "darkModeToggle": "Toggle dark mode",
@@ -61,6 +66,7 @@
   "disabled": "Disabled",
   "discNumber": "Disc {discNumber}",
   "dislikes": "Dislikes",
+  "downloadItem": "Download | Download all",
   "edit": "Edit",
   "editMetadata": "Edit metadata",
   "editPerson": "Edit person",
@@ -104,8 +110,8 @@
     }
   },
   "identify": "Identify",
-  "identifyInstructResult": "You can click on one of these cards to apply the result",
   "identifyConfirmChanges": "Are you sure do you want to change '{originalItem}' with '{newIdentifiedItem}'?",
+  "identifyInstructResult": "You can click on one of these cards to apply the result",
   "imageType": {
     "art": "Art",
     "backdrop": "Backdrop",
@@ -201,27 +207,56 @@
     "noLogsFound": "No logs found"
   },
   "manualLogin": "Manual login",
-  "mediaInfo": {
-    "audioChannels": {
-      "name": "Audio channels:"
-    },
-    "audioCodec": {
-      "name": "Audio codec:"
-    },
-    "bitrate": {
-      "name": "Bitrate:"
-    },
-    "container": {
-      "name": "Container:"
-    },
-    "name": "Media",
-    "subtitleCodec": {
-      "name": "Subtitle codec:"
-    },
-    "videoCodec": {
-      "name": "Video codec:"
-    }
-  },
+  "mediaInfo": "Media Info",
+  "mediaInfoAudioChannelLayout": "Layout:",
+  "mediaInfoAudioChannels": "Channels:",
+  "mediaInfoAudioSampleRate": "Sample rate:",
+  "mediaInfoFileContainer": "Container:",
+  "mediaInfoFileFormats": "Format:",
+  "mediaInfoFilePath": "Path:",
+  "mediaInfoFileSize": "Size:",
+  "mediaInfoFileTitle": "Title:",
+  "mediaInfoGenericBitrate": "Bitrate:",
+  "mediaInfoGenericCodec": "Codec:",
+  "mediaInfoGenericCodecTag": "Codec tag:",
+  "mediaInfoGenericIsDefault": "Default:",
+  "mediaInfoGenericIsExternal": "External:",
+  "mediaInfoGenericIsForced": "Forced:",
+  "mediaInfoGenericLanguage": "Language:",
+  "mediaInfoGenericProfile": "Profile:",
+  "mediaInfoTitlesAudioCodec": "Audio | Audio {0}",
+  "mediaInfoTitlesEmbeddedImageCodec": "Image | Image {0}",
+  "mediaInfoTitlesSubtitleCodec": "Subtitle | Subtitle {0}",
+  "mediaInfoTitlesVideoCodec": "Video | Video {0}",
+  "mediaInfoVideoAspectRatio": "Aspect ratio:",
+  "mediaInfoVideoBitDepth": "Bit depth:",
+  "mediaInfoVideoBitrate": "Bitrate:",
+  "mediaInfoVideoColorPrimaries": "Color primaries:",
+  "mediaInfoVideoColorRange": "Color range:",
+  "mediaInfoVideoColorSpace": "Color space:",
+  "mediaInfoVideoColorTransfer": "Color transfer:",
+  "mediaInfoVideoDoViBlPresent": "DoVi BL present:",
+  "mediaInfoVideoDoViBlSignalCompatId": "DV bl signal compatibility ID:",
+  "mediaInfoVideoDoViElPresent": "DV el preset flag:",
+  "mediaInfoVideoDoViLevel": "DV level:",
+  "mediaInfoVideoDoViMajorVersion": "DV version major:",
+  "mediaInfoVideoDoViMinorVersion": "DV version minor:",
+  "mediaInfoVideoDoViProfile": "DV profile:",
+  "mediaInfoVideoDoViRpuPresent": "DV rpu preset flag:",
+  "mediaInfoVideoDoViTitle": "DV title:",
+  "mediaInfoVideoFrameRate": "Framerate:",
+  "mediaInfoVideoIsAnamorphic": "Anamorphic:",
+  "mediaInfoVideoIsAvc": "AVC:",
+  "mediaInfoVideoLevel": "Level:",
+  "mediaInfoVideoPixelFormat": "Pixel format:",
+  "mediaInfoVideoRange": "Video range:",
+  "mediaInfoVideoRangeType": "Video range type:",
+  "mediaInfoVideoRefFrames": "Ref frames:",
+  "mediaInfoVideoResolution": "Resolution:",
+  "mediaInfoVideoScanInterlaced": "Interlaced",
+  "mediaInfoVideoScanProgressive": "Progressive",
+  "mediaInfoVideoScanType": "Scan type:",
+  "mediaInfoVideoTimestamp": "Timestamp:",
   "menu": "Menu",
   "metadata": {
     "source": "Source",
@@ -239,6 +274,7 @@
   "name": "Name",
   "networks": "Networks",
   "nextUp": "Next up",
+  "no": "No",
   "noImagesFound": "No images found",
   "noInformationAvailable": "No information available",
   "noNetworkConnection": "No network connection",
@@ -337,6 +373,7 @@
   "searchNoResults": "No results found",
   "seasonEpisode": "Season {seasonNumber}, Episode {episodeNumber}",
   "seasonEpisodeAbbrev": "S{seasonNumber} E{episodeNumber}",
+  "selectVersion": "Select version",
   "series": "Series",
   "server": "Server",
   "serverVersion": "Server version",
@@ -578,5 +615,6 @@
   "writing": "Writing",
   "year": "Year",
   "years": "Years",
+  "yes": "Yes",
   "youMayAlsoLike": "You may also like"
 }
