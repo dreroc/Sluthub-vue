@@ -9,7 +9,8 @@ It has some customizations for branding, some stability changes, bugfixes, unmer
 <br>
 <details>
   <summary>Original Readme, until I rewrite it in my style</summary>
-## Privacy disclaimer 🕵🏻
+
+  ## Privacy disclaimer 🕵🏻
 
 Jellyfin Vue is just a GUI _frontend_ for a Jellyfin server. It only establishes connection to the Jellyfin server that you point it to, **nothing else**.
 
