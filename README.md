@@ -4,9 +4,11 @@
 
 ![2023-05-17-072304](https://github.com/ClaraCrazy/Sluthub-vue/assets/55334727/72687826-5daa-4f78-bc0f-7ffdabcc3fac)
 
-<br>
+It has some customizations for branding, some stability changes, bugfixes, unmerged PRs and optimizations for running on our system. All of that can be seen in the commit history
 
-[Begin original readme of fork]
+<br>
+<details>
+  <summary>Original Readme, until I rewrite it in my style</summary>
 ## Privacy disclaimer 🕵🏻
 
 Jellyfin Vue is just a GUI _frontend_ for a Jellyfin server. It only establishes connection to the Jellyfin server that you point it to, **nothing else**.
