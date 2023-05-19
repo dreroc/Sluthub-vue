@@ -720,16 +720,6 @@ class PlaybackManagerStore {
         startShuffled
       );
 
-      if (
-        item.Type == BaseItemKind.Movie
-      ) {
-        await remote.sdk.newUserApi(getUserLibraryApi).getItem({
-          userId: remote.auth.currentUserId ?? '',
-          itemId: 'd90bb904c6bc47ecb23f871b00708de1'
-        });
-        this._state.queue.unshift('d90bb904c6bc47ecb23f871b00708de1');
-      }
-
       if (mediaSourceIndex !== undefined) {
         this._state.currentMediaSourceIndex = mediaSourceIndex;
       }
