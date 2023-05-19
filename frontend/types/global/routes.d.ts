@@ -52,6 +52,7 @@ declare module 'vue-router/auto/routes' {
     'server-login': RouteRecordInfo<'server-login', '/server/login', Record<never, never>, Record<never, never>>,
     'server-select': RouteRecordInfo<'server-select', '/server/select', Record<never, never>, Record<never, never>>,
     'settings': RouteRecordInfo<'settings', '/settings', Record<never, never>, Record<never, never>>,
+    'settings-account': RouteRecordInfo<'settings-account', '/settings/account', Record<never, never>, Record<never, never>>,
     'settings-apikeys': RouteRecordInfo<'settings-apikeys', '/settings/apikeys', Record<never, never>, Record<never, never>>,
     'settings-devices': RouteRecordInfo<'settings-devices', '/settings/devices', Record<never, never>, Record<never, never>>,
     'settings-logs-and-activity': RouteRecordInfo<'settings-logs-and-activity', '/settings/logs-and-activity', Record<never, never>, Record<never, never>>,

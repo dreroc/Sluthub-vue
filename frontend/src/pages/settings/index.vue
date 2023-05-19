@@ -151,7 +151,7 @@ const userItems = computed(() => {
       icon: IMdiAccount,
       name: t('settingsSections.account.name'),
       description: t('settingsSections.account.description'),
-      link: undefined
+      link: 'settings/account'
     },
     {
       icon: IMdiHome,
