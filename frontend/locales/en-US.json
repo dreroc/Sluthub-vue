@@ -104,6 +104,7 @@
   "headerExternalIds": "External IDs",
   "headerPaths": "Path",
   "home": "Home",
+  "requests": "Requests",
   "homeHeader": {
     "items": {
       "recentlyAdded": "Recently added"
