@@ -14,6 +14,7 @@
         v-for="item in items"
         :key="item.to"
         :to="item.to"
+        :href="item.href"
         exact
         :prepend-icon="item.icon"
         :title="item.title" />
