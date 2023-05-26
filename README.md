@@ -1,4 +1,4 @@
-<h1 align="center"> Vue frontend for "sluthub", a media server I host<br>Forked from <a href="https://github.com/jellyfin/jellyfin-vue">Jellyfin</a>, detached for better repo control</h1>
+<h1 align="center"> Vue frontend for "sluthub.is", a media server I host<br>Forked from <a href="https://github.com/jellyfin/jellyfin-vue">Jellyfin</a>, detached for better repo control</h1>
 
 <br>
 
