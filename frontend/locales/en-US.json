@@ -105,6 +105,7 @@
   "headerPaths": "Path",
   "home": "Home",
   "requests": "Requests",
+  "discord": "Discord",
   "homeHeader": {
     "items": {
       "recentlyAdded": "Recently added"
