@@ -84,7 +84,7 @@ const items = [
   {
     icon: IMdiMessageText,
     title: t('discord'),
-    href: `https://discord.gg/jUNCqtGf3W/`
+    href: `https://discord.gg/jUNCqtGf3W`
   }
 ];
 </script>
