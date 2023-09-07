@@ -244,7 +244,7 @@ import { useRemote } from '@/composables';
 const route = useRoute();
 const remote = useRemote();
 
-const { itemId } = route.params as { itemId: string };
+const itemId = (route.params as { itemId: string }).itemId.replaceAll('-', '');
 
 const item = (
   await remote.sdk.newUserApi(getUserLibraryApi).getItem({

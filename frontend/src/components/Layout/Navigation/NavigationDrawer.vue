@@ -42,6 +42,7 @@ import { useI18n } from 'vue-i18n';
 import { computed, inject, Ref } from 'vue';
 import IMdiHome from 'virtual:icons/mdi/home';
 import IMovieOpenPlus from 'virtual:icons/mdi/movie-open-plus';
+import IMdiMessageText from 'virtual:icons/mdi/message-text';
 import { userLibrariesStore } from '@/store';
 import { getLibraryIcon } from '@/utils/items';
 
@@ -79,6 +80,11 @@ const items = [
     icon: IMovieOpenPlus,
     title: t('requests'),
     href: `https://requests.${window.location.hostname}/`
+  },
+  {
+    icon: IMdiMessageText,
+    title: t('discord'),
+    href: `https://discord.gg/jUNCqtGf3W`
   }
 ];
 </script>
